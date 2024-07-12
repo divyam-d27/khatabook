@@ -11,12 +11,7 @@ import { KhatabookContext } from "../providers/KhatabookContext";
 
 const Chart = () => {
   const { transactions } = useContext(KhatabookContext);
-  const incomes = transactions.filter(
-    (transaction) => transaction.type === "credit"
-  );
-  const expenses = transactions.filter(
-    (transaction) => transaction.type === "debit"
-  );
+
   let balance = 0;
   const balanceData = [];
   transactions.forEach((transaction) => {
